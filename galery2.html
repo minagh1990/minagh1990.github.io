@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>گالری</title>
+    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css" />
+    <script src="js/js-image-slider.js" type="text/javascript"></script>
+    <link href="generic.css" rel="stylesheet" type="text/css" />
+<style></p>
+#simple_menu{
+padding:0px;
+margin:0px;
+}
+#simple_menu ul li{
+display:inline-block;S
+float:left;
+list-style:none;
+position:relative;
+padding:10px 15px;
+background:#efefef;
+background:-moz-linear-gradient(top,#efefef 0%,bbbbbb 100%);
+background:-webkit-linear-gradient(top,#efefef 0%,bbbbbb 100%);
+box-shadow:0px 0px 9px rgba(0,0,0,0.15);
+border-radius:10px;
+border-bottom:3px solid #5f6975;
+color:#4b545f;
+font: 15px cursive;
+text-align:center;
+width:100px;
+}
+ 
+#simple_menu ul li ul{
+position: absolute;
+left:0px;
+top:100%;
+text-align:right;
+margin-top: 3px;
+z-index:999;
+display:none;
+}
+#simple_menu ul li ul{
+position: absolute;
+left:0px;
+top:100%;
+padding: 0px;
+background:transparent !important;
+}
+#simple_menu ul li ul li{
+background:#efefef;
+background:-moz-linear-gradient(top,#efefef 0%,bbbbbb 100%);
+background:-webkit-linear-gradient(top,#efefef 0%,bbbbbb 100%);
+box-shadow:0px 0px 9px rgba(0,0,0,0.15);
+border-radius:10px;
+text-align:right;
+width:150px;
+text-align:right;
+<!--border-bottom:1px dashed #2E9FFF;-->
+position: relative;
+}
+#simple_menu ul li:hover{
+background:#333538;
+color:#fff;
+}
+#simple_menu ul li ul li:hover{
+background:#333538;
+color:#FFF;
+}
+#simple_menu ul li:hover ul{
+display:block;
+}
+#simple_menu ul li ul li ul{
+position: absolute;
+top:0px !important;
+left:100% !important;
+margin-top: -1px !important;
+<!--border-top:1px dashed #333538;-->
+background:transparent !important;
+display:none !important;
+}
+#simple_menu ul li ul li ul li{
+margin-top:0px;
+}
+#simple_menu ul li ul li:hover ul{
+display:block !important;
+}
+</style>
+<SCRIPT LANGUAGE="JAVASCRIPT">
+function showdate() {
+week= new Array("يكشنبه","دوشنبه","سه شنبه","چهارشنبه","پنجشنبه","جمعه","شنبه")
+months = new Array("فروردين","ارديبهشت","خرداد","تير","مرداد","شهريور","مهر","آبان","آذر","دي","بهمن","اسفند");
+a = new Date();
+d= a.getDay();
+day= a.getDate();
+month = a.getMonth()+1;
+year= a.getYear();
+if (year== 0){year=2000;}
+if (year<900){year +=1900;}
+y=1;
+for(i=0;i<3000;i+=4) {
+if (year==i) {y=2;}
+}
+for(i=1;i<3000;i+=4) {
+if (year==i) {y=3;}
+}
+if (y==1) {
+year -= ( (month < 3) || ((month == 3) && (day < 21)) )? 622:621;
+
+switch (month) {
+case 1: (day<21)? (month=10, day+=10):(month=11, day-=20); break;
+case 2: (day<20)? (month=11, day+=11):(month=12, day-=19); break;
+case 3: (day<21)? (month=12, day+=9):(month=1, day-=20); break;
+case 4: (day<21)? (month=1, day+=11):(month=2, day-=20); break;
+case 5:
+case 6: (day<22)? (month-=3, day+=10):(month-=2, day-=21); break;
+case 7:
+case 8:
+case 9: (day<23)? (month-=3, day+=9):(month-=2, day-=22); break;
+case 10:(day<23)? (month=7, day+=8):(month=8, day-=22); break;
+case 11:
+case 12:(day<22)? (month-=3, day+=9):(month-=2, day-=21); break;
+default: break;
+}
+}
+if (y==2) {
+year -= ( (month < 3) || ((month == 3) && (day < 20)) )? 622:621;
+
+switch (month) {
+case 1: (day<21)? (month=10, day+=10):(month=11, day-=20); break;
+case 2: (day<20)? (month=11, day+=11):(month=12, day-=19); break;
+case 3: (day<20)? (month=12, day+=10):(month=1, day-=19); break;
+case 4: (day<20)? (month=1, day+=12):(month=2, day-=19); break;
+case 5: (day<21)? (month=2, day+=11):(month=3, day-=20); break;
+case 6: (day<21)? (month=3, day+=11):(month=4, day-=20); break;
+case 7: (day<22)? (month=4, day+=10):(month=5, day-=21); break;
+case 8: (day<22)? (month=5, day+=10):(month=6, day-=21); break;
+case 9: (day<22)? (month=6, day+=10):(month=7, day-=21); break;
+case 10:(day<22)? (month=7, day+=9):(month=8, day-=21); break;
+case 11:(day<21)? (month=8, day+=10):(month=9, day-=20); break;
+case 12:(day<21)? (month=9, day+=10):(month=10, day-=20); break;
+default: break;
+}
+}
+if (y==3) {
+year -= ( (month < 3) || ((month == 3) && (day < 21)) )? 622:621;
+switch (month) {
+case 1: (day<20)? (month=10, day+=11):(month=11, day-=19); break;
+case 2: (day<19)? (month=11, day+=12):(month=12, day-=18); break;
+case 3: (day<21)? (month=12, day+=10):(month=1, day-=20); break;
+case 4: (day<21)? (month=1, day+=11):(month=2, day-=20); break;
+case 5:
+case 6: (day<22)? (month-=3, day+=10):(month-=2, day-=21); break;
+case 7:
+case 8:
+case 9: (day<23)? (month-=3, day+=9):(month-=2, day-=22); break;
+case 10:(day<23)? (month=7, day+=8):(month=8, day-=22); break;
+case 11:
+case 12:(day<22)? (month-=3, day+=9):(month-=2, day-=21); break;
+default: break;
+}
+}
+document.write(week[d]+" "+day+" "+months[month-1]+" "+ year);
+}
+</SCRIPT>
+
+<FONT face=tahoma size="2" color="#000000" align="right">
+<SCRIPT>showdate()</SCRIPT>
+</FONT>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+</head>
+<body style="background-color:#778899">
+<div class="container-fluid">
+<div id="simple_menu" align="right">
+<ul>
+<li>
+عضویت
+</li>
+<li>
+گالری
+<ul>
+<li><a href="galery1.html"  style="text-decoration:none">طبیعت آذربایجان شرقی</a></li>
+<li><a href="galery2.html"  style="text-decoration:none">هنری</a></li>
+<li><a href="galery3.html"  style="text-decoration:none">برترین های عکاسی</a></li>
+</ul>
+</li>
+<li>
+آموزشی
+<ul>
+<li>unity</li>
+<li>3dmax</li>
+<li>photoshop</li>
+</ul>
+</li>
+<li>
+<a href="aboutme.html"  style="text-decoration:none">درباره من</a>
+</li>
+<li>
+<a href="menu.html"  style="text-decoration:none">صفحه اصلی</a>
+</li>
+</ul>
+</div>
+    <div id="sliderFrame">
+        <div id="ribbon"></div>
+        <div id="slider">
+           
+            <img src="data1/images/gg1.jpg" alt="هنری1" />
+            <img src="data1/images/ggg2.jpg"  alt="هنری2" />
+            <img src="data1/images/gg3.jpg"  alt="هنری3" />
+            <img src="data1/images/gg4.jpg"  alt="هنری4"/>
+            <img src="data1/images/gg5.jpg"  alt="هنری5" />
+            <img src="data1/images/gg6.jpg"  alt="هنری6" />
+            <img src="data1/images/gg7.jpg"  alt="هنری7" />
+			<img src="data1/images/gg8.jpg"  alt="هنری8" />
+        </div>
+
+        <div id="thumbs">
+            <div class="thumb"><img src="data1/images/gg1.jpg" /></div>
+            <div class="thumb"><img src="data1/images/ggg2.jpg" /></div>
+            <div class="thumb"><img src="data1/images/gg3.jpg" /></div>
+            <div class="thumb"><img src="data1/images/gg4.jpg" /></div>
+            <div class="thumb"><img src="data1/images/gg5.jpg" /></div>
+            <div class="thumb"><img src="data1/images/gg6.jpg" /></div>
+            <div class="thumb"><img src="data1/images/gg7.jpg" /></div>
+            <div class="thumb"><img src="data1/images/gg8.jpg" /></div>
+        </div>
+    </div>
+
+</body>
+</html>
