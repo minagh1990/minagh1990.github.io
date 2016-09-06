@@ -1,82 +1,81 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>درباره من</title>
-    <style>
-        #simple_menu{
-        padding:0px;
-        margin:0px;
+    <style type="text/css">
+        body {
+            font-family:Tahoma, Geneva, sans-serif;
+            font-size:12px;
+            direction:rtl;
+            line-height:20px;
         }
-        #simple_menu ul li{
-        display:inline-block;
-        float:left;
-        list-style:none;
-        position:relative;
-        padding:10px 15px;
-        background:#efefef;
-        background:-moz-linear-gradient(top,#efefef 0%,#bbbbbb 100%);
-        background:-webkit-linear-gradient(top,#efefef 0%,#bbbbbb 100%);
-        box-shadow:0px 0px 9px rgba(0,0,0,0.15);
-        border-radius:10px;
-        border-bottom:3px solid #5f6975;
-        color:#4b545f;
-        font: 15px cursive;
-        text-align:center;
-        width:100px;
+        a {
+            text-decoration:none;
+            color:#03C;
         }
-
-        #simple_menu ul li ul{
-        position: absolute;
-        left:0px;
-        top:100%;
-        text-align:right;
-        margin-top: 3px;
-        z-index:999;
-        display:none;
+        a:hover {
+            color:#CCC;
         }
-        #simple_menu ul li ul{
-        position: absolute;
-        left:0px;
-        top:100%;
-        padding: 0px;
-        background:transparent !important;
+        #main-menu {
+            position:relative;
+            line-height:16px;
         }
-        #simple_menu ul li ul li{
-        background:#efefef;
-        background:-moz-linear-gradient(top,#efefef 0%,#bbbbbb 100%);
-        background:-webkit-linear-gradient(top,#efefef 0%,#bbbbbb 100%);
-        box-shadow:0px 0px 9px rgba(0,0,0,0.15);
-        border-radius:10px;
-        text-align:right;
-        width:150px;
-        text-align:right;
-        <!--border-bottom:1px dashed #2E9FFF;-->
-        position: relative;
+        #main-menu a {
+            display:block;
+            width:150px;
+            padding:8px;
+            border:#333333 solid 1px;
+            background-color:#5f6975;
+            color:#FFFFFF;
         }
-        #simple_menu ul li:hover{
-        background:#333538;
-        color:#fff;
+        #main-menu a:hover {
+            background-color:#333333;
         }
-        #simple_menu ul li ul li:hover{
-        background:#333538;
-        color:#FFF;
+        #main-menu ul {
+            list-style-type:none;
+            padding-top:0px;
         }
-        #simple_menu ul li:hover ul{
-        display:block;
+        #main-menu li {
+            float:right;
+            position:relative;
+            text-align:center;
         }
-        #simple_menu ul li ul li ul{
-        position: absolute;
-        top:0px !important;
-        left:100% !important;
-        margin-top: -1px !important;
-        <!--border-top:1px dashed #333538;-->
-        background:transparent !important;
-        display:none !important;
+        #main-menu li ul a{
+            text-align:center;
+            border:0px;
+            border-bottom:#333333 1px solid;
         }
-        #simple_menu ul li ul li ul li{
-        margin-top:0px;
+        #main-menu ul.sub-menu {
+            display:none;
+            position:absolute;
+            top:30px;
+            margin-right:0px;
+            padding:0px;
+            z-index:999;
         }
-        #simple_menu ul li ul li:hover ul{
-        display:block !important;
+        #main-menu ul.sub-menu li {
+            text-align:center;
+        }
+        #main-menu li:hover ul.sub-menu {
+            display: block;
+            border: 1px solid #333333;
+        }
+        .clear{
+            clear:both;
+        }
+        #main-menu ul.sub-menu {
+            left:0px;
+        }
+        #main-menu li:hover ul ul{
+            display:none;
+        }
+        #main-menu li li:hover ul{
+            display:block;
+            position:absolute;
+            top:10px;
+            right:125px;
+            z-index:1000;
         }
     </style>
     <SCRIPT LANGUAGE="JAVASCRIPT">
@@ -224,145 +223,118 @@
         }
     </SCRIPT>
 
-    <FONT face=tahoma size="2" color="#000000" align="right">
+    <FONT face=tahoma size="2" color="#000000">
         <SCRIPT>showdate()</SCRIPT>
     </FONT>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 </head>
 <body style="background-color:#778899">
 <div class="container">
     <div class="row">
-        <div id="simple_menu" align="right" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div id="main-menu">
             <ul>
-                <li>
-                    عضویت
-                </li>
-                <li>
-                    گالری
-                    <ul>
-                        <li><a href="galery1.html" style="text-decoration:none">طبیعت آذربایجان شرقی</a></li>
-                        <li><a href="galery2.html" style="text-decoration:none">هنری</a></li>
-                        <li><a href="galery3.html" style="text-decoration:none">برترین های عکاسی</a></li>
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">درباره من</a></li>
+                <li><a href="#">آموزشی</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">unity</a></li>
+                        <li><a href="#">3dmax</a></li>
+                        <li><a href="#">photoshop</a></li>
                     </ul>
                 </li>
-                <li>
-                    آموزشی
-                    <ul>
-                        <li>unity</li>
-                        <li>3dmax</li>
-                        <li>photoshop</li>
+                <li><a href="#">گالری</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">طبیعت آذربایجان شرقی</a></li>
+                        <li><a href="#">هنری</a></li>
+                        <li><a href="#">برترین ها</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="aboutme.html" style="text-decoration:none">درباره من</a>
-                </li>
-                <li>
-                    <a href="index.html" style="text-decoration:none">صفحه اصلی</a>
-                </li>
+                <li><a href="#">عضویت</a></li>
             </ul>
+            <div class="clear"></div>
         </div>
-        <div style="width:700px;height:900px;position:absolute;left:250px;top:180px;text-align:right;font-family: Arial;font-size:20px"
-             class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
-            <br>
-            با عرض سلام خدمت بازیدکنندگان عزیز&nbsp;&nbsp;&nbsp;
-            <br>
-            <br>
-            <!--<div style="width:680px;height:880px;position:absolute;left:5px;top:50px;right:20px;text-align:right;font-family: Arial" class="col-lg-12 col-md-12 col-sm-12 col-xs-12">-->
-            <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4">
-                <p style="text-align:justify; direction:rtl">
-                    مینا قاسمی هریس متولد هجده تیر سال هزاروسیصدو شصت و نه هستم. رشته تحصیلی بنده در دوره کارشناسی
-                    چندرسانه ای بود که تو ایران رشته جدیدی است
-                </p>
-            </div>
-            <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4">
-                <p style="text-align:justify; direction:rtl">
-                    خب بزارید یکم در مورد رشته ام براتون توضیح بدم.این رشته تلفیقی از هنر و کامپیوتره و هرکدوم از بچه ها
-                    برحسب علاقه به یکی از این دو سمت گرایش بیشتری پیدا میکنند خود من بیشتر به سمت برنامه نویسی و
-                    کامپیوتر گرایش دارم البته درسایی که تو دانشگاه تدریس میشه هم شامل درسای هنریه و هم برنامه نویسیو
-                    کامپیوتر ولی درسای هنری به قول معروف چربش بیشتری داره اونم به خاطره اینه که این رشته داره تو دانشگاه
-                    هنر تدریس میشه.
-                </p>
-            </div>
-            <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4">
-                <p style="text-align:justify; direction:rtl">
-                    من تو دانشگاه پروژه های زیادی کار کردم که هم هنری بوده و هم برنامه نویسی مثلا تو پروژه های هنری ،
-                    طراحی لوگو ؛تصویر سازی؛ طراحی کار کردم و تو پروژه های برنامه نویسی طراحی سایت با اچ تی ام ال و سی اس
-                    اس و جاوا اسکریپتو تا حدودی پی اچ پی کار کردم و همچنین نرم افزار پینت با سی شارپ هم پیاده سازی کردم
-                    باید بگم که انیمیشن دوبعدی با افتر افکتم انجام دادم و حتی صداگذاریم برای انمیشن انجام دادم در واقع
-                    یه جوری آچار فرانسه ایم :)
-                </p>
-            </div>
-            <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4">
-                <p style="text-align:justify; direction:rtl">
-                    خب برسیم به پروژه پایانی بنده در دوره کارشناسی که یه بازی رایانه ای بود که یه کار گروهی بود و بنده
-                    باید کدنویسی هوش بازی رو انجام میدادم ،موتور بازی که ما استفاده کردیم یونیتی بود . سبک بازی ما
-                    ماجراجویی بود و موضوع بازی تاریخی بود
-                </p>
-            </div>
-            <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4">
-                <p style="text-align:justify; direction:rtl">
-                    در طی این پروژه من باید چیزای جدیدی در مورد درخت رفتار که مبحثی از هوش مصنوعیه یاد میگرفتم که تونستم
-                    با مطالعه منابع انگلیسی این کارو انجام بدم و خوشبختانه بازیمونو به پایان برسونیم و بهترین نمره
-                    ورودیمونو که بیست بود بگیریم .حالا اگه هم گروهیام اجازه دادن فایل بازی رو تو همین سایت براتون
-                    میزارم.
-                </p>
-            </div>
-            <div class="col-lg-12 col-md-8 col-sm-6 col-xs-4">
-                <p style="text-align:left; direction:rtl">
-                    با آرزوی توفیق برای همه شما عزیزان
-                </p>
-            </div>
-            <!--</div>-->
-        </div>
-        <div style="width:300px;height:100px;position:absolute;right:25px;top:150px;background:#efefef;
-background:-moz-linear-gradient(top,#efefef 0%,bbbbbb 100%);
-background:-webkit-linear-gradient(top,#efefef 0%,bbbbbb 100%);
-box-shadow:0px 0px 9px rgba(0,0,0,0.15);
-border-radius:10px;
-border-bottom:3px solid #5f6975;" class="hidden-md hidden-sm hidden-xs">
-            <form target='_blank' method="get" action="http://www.google.com/search" style="margin:0; padding:0">
-                <table width="100%" border="0" cellspacing="0" cellpadding="0" dir="rtl"
-                       style="margin: 0 auto 12px auto; width:220px; font:normal 11px tahoma; line-height:20px">
-
-                    <tr>
-                        <td colspan="2" style="text-align:right">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                <tr>
-                                    <td width="48%"><input name="q" size="15" maxlength="255"
-                                                           style="direction:rtl; padding:2px 3px; direction:rtl; width:150px; font-family:Tahoma; font-size:11px"/>
-                                    </td>
-                                    <td width="52%"><input type="submit" name="btnG" value="جستجو"
-                                                           style="padding:2px 5px; font-size:11px; font-family:Tahoma; margin-right:3px"/>
-                                    </td>
-                                </tr>
-                            </table>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td width="10%" style="text-align:right"><input value='webkaran.com' type="radio"
-                                                                        name="sitesearch" checked=''/></td>
-                        <td width="100%" style="text-align:right">در سایت</td>
-                    </tr>
-                    <tr>
-                        <td style="text-align:right"><input type="radio" name="sitesearch" value=""/></td>
-                        <td style="text-align:right">در اينترنت
-                            <input type="hidden" name="ie" value="UTF-8"/>
-                            <input type="hidden" name="oe" value="UTF-8"/></td>
-                    </tr>
-                </table>
-            </form>
-        </div>
-        <div style="width:300px;height:300px;position:absolute;right:25px;top:260px;background:#efefef;
-background:-moz-linear-gradient(top,#efefef 0%,bbbbbb 100%);
-background:-webkit-linear-gradient(top,#efefef 0%,bbbbbb 100%);
-box-shadow:0px 0px 9px rgba(0,0,0,0.15);
-border-radius:10px;
-border-bottom:3px solid #5f6975;" class="hidden-md hidden-sm hidden-xs"></div>
     </div>
 </div>
-<script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="bootstrap-3.3.7-dist/js/npm.js"></script>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <p style="text-align:justify; direction:rtl">
+                <font color="#000000">با عرض سلام خدمت همه شما عزیزان</font>
+            </p>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <p style="text-align:justify; direction:rtl">
+                <font color="#000000">
+                مینا قاسمی هریس متولد هجده تیر سال هزاروسیصدو شصت و نه هستم. رشته تحصیلی بنده در دوره کارشناسی
+                چندرسانه ای بود که تو ایران رشته جدیدی است
+            </font>
+            </p>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <p style="text-align:justify; direction:rtl">
+                <font color="#000000">
+                خب بزارید یکم در مورد رشته ام براتون توضیح بدم.این رشته تلفیقی از هنر و کامپیوتره و هرکدوم از بچه ها
+                برحسب علاقه به یکی از این دو سمت گرایش بیشتری پیدا میکنند خود من بیشتر به سمت برنامه نویسی و
+                کامپیوتر گرایش دارم البته درسایی که تو دانشگاه تدریس میشه هم شامل درسای هنریه و هم برنامه نویسیو
+                کامپیوتر ولی درسای هنری به قول معروف چربش بیشتری داره اونم به خاطره اینه که این رشته داره تو دانشگاه
+                هنر تدریس میشه.
+            </font>
+            </p>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <p style="text-align:justify; direction:rtl">
+                <font color="#000000">
+                من تو دانشگاه پروژه های زیادی کار کردم که هم هنری بوده و هم برنامه نویسی مثلا تو پروژه های هنری ،
+                طراحی لوگو ؛تصویر سازی؛ طراحی کار کردم و تو پروژه های برنامه نویسی طراحی سایت با اچ تی ام ال و سی اس
+                اس و جاوا اسکریپتو تا حدودی پی اچ پی کار کردم و همچنین نرم افزار پینت با سی شارپ هم پیاده سازی کردم
+                باید بگم که انیمیشن دوبعدی با افتر افکتم انجام دادم و حتی صداگذاریم برای انمیشن انجام دادم در واقع
+                یه جوری آچار فرانسه ایم :)
+          </font>
+            </p>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <p style="text-align:justify; direction:rtl">
+                <font color="#000000">
+                خب برسیم به پروژه پایانی بنده در دوره کارشناسی که یه بازی رایانه ای بود که یه کار گروهی بود و بنده
+                باید کدنویسی هوش بازی رو انجام میدادم ،موتور بازی که ما استفاده کردیم یونیتی بود . سبک بازی ما
+                ماجراجویی بود و موضوع بازی تاریخی بود
+           </font>
+            </p>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <p style="text-align:justify; direction:rtl">
+                <font color="#000000">
+                در طی این پروژه من باید چیزای جدیدی در مورد درخت رفتار که مبحثی از هوش مصنوعیه یاد میگرفتم که تونستم
+                با مطالعه منابع انگلیسی این کارو انجام بدم و خوشبختانه بازیمونو به پایان برسونیم و بهترین نمره
+                ورودیمونو که بیست بود بگیریم .حالا اگه هم گروهیام اجازه دادن فایل بازی رو تو همین سایت براتون
+                میزارم.
+           </font>
+            </p>
+        </div>
+        <div class="col-lg-12 col-md-12">
+            <p style="text-align:justify; direction:rtl">
+                <font color="#000000">
+                با آرزوی توفیق برای همه شما عزیزان
+            </font>
+            </p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
