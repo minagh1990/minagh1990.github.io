@@ -1,92 +1,82 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>how to create a dropdown menu tutorial</title>
-    <style>
-        #simple_menu {
-            padding: 0px;
-            margin: 0px;
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>وبگو | آموزش منوی کشویی با ul li و css</title>
+    <!-- http://webgoo.ir -->
+    <style type="text/css">
+        body {
+            font-family:Tahoma, Geneva, sans-serif;
+            font-size:12px;
+            direction:rtl;
+            line-height:20px;
         }
-
-        #simple_menu ul li {
-            display: inline-block;
-            float: left;
-            list-style: none;
-            position: relative;
-            padding: 10px 15px;
-            background: #efefef;
-            background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-            background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-            box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
-            border-radius: 10px;
-            border-bottom: 3px solid #5f6975;
-            color: #4b545f;
-            font: 15px cursive;
-            text-align: center;
-            width: 100px;
+        a {
+            text-decoration:none;
+            color:#03C;
         }
-
-        #simple_menu ul li ul {
-            position: absolute;
-            left: 0px;
-            top: 100%;
-            text-align: right;
-            margin-top: 3px;
-            z-index: 999;
-            display: none;
+        a:hover {
+            color:#CCC;
         }
-
-        #simple_menu ul li ul {
-            position: absolute;
-            left: 0px;
-            top: 100%;
-            padding: 0px;
-            background: transparent !important;
+        #main-menu {
+            position:relative;
+            line-height:16px;
         }
-
-        #simple_menu ul li ul li {
-            background: #efefef;
-            background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-            background: -webkit-linear-gradient(top, #efefef 0%, #bbbbbb 100%);
-            box-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
-            border-radius: 10px;
-            text-align: right;
-            width: 150px;
-            text-align: right;
-        <!-- border-bottom: 1 px dashed #2E9FFF;
-        --> position: relative;
+        #main-menu a {
+            display:block;
+            width:150px;
+            padding:8px;
+            border:#333333 solid 1px;
+            background-color:#5f6975;
+            color:#FFFFFF;
         }
-
-        #simple_menu ul li:hover {
-            background: #333538;
-            color: #fff;
+        #main-menu a:hover {
+            background-color:#333333;
         }
-
-        #simple_menu ul li ul li:hover {
-            background: #333538;
-            color: #FFF;
+        #main-menu ul {
+            list-style-type:none;
+            padding-top:0px;
         }
-
-        #simple_menu ul li:hover ul {
+        #main-menu li {
+            float:right;
+            position:relative;
+            text-align:center;
+        }
+        #main-menu li ul a{
+            text-align:center;
+            border:0px;
+            border-bottom:#333333 1px solid;
+        }
+        #main-menu ul.sub-menu {
+            display:none;
+            position:absolute;
+            top:30px;
+            margin-right:0px;
+            padding:0px;
+            z-index:999;
+        }
+        #main-menu ul.sub-menu li {
+            text-align:center;
+        }
+        #main-menu li:hover ul.sub-menu {
             display: block;
+            border: 1px solid #333333;
         }
-
-        #simple_menu ul li ul li ul {
-            position: absolute;
-            top: 0px !important;
-            left: 100% !important;
-            margin-top: -1px !important;
-        <!-- border-top: 1 px dashed #333538;
-        --> background: transparent !important;
-            display: none !important;
+        .clear{
+            clear:both;
         }
-
-        #simple_menu ul li ul li ul li {
-            margin-top: 0px;
+        #main-menu ul.sub-menu {
+            left:0px;
         }
-
-        #simple_menu ul li ul li:hover ul {
-            display: block !important;
+        #main-menu li:hover ul ul{
+            display:none;
+        }
+        #main-menu li li:hover ul{
+            display:block;
+            position:absolute;
+            top:10px;
+            right:125px;
+            z-index:1000;
         }
     </style>
     <SCRIPT LANGUAGE="JAVASCRIPT">
@@ -234,7 +224,7 @@
         }
     </SCRIPT>
 
-    <FONT face=tahoma size="2" color="#000000" align="right">
+    <FONT face=tahoma size="2" color="#000000">
         <SCRIPT>showdate()</SCRIPT>
     </FONT>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
@@ -253,50 +243,35 @@
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
             integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
             crossorigin="anonymous"></script>
-
 </head>
 <body style="background-color:#778899">
 <div class="container">
     <div class="row">
-        <div id="simple_menu" align="right">
-            <ul style="direction:rtl">
-                <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                    <a href="index.html" style="text-decoration:none">صفحه اصلی</a>
-                </li>
-                <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                    <a href="aboutme.html" style="text-decoration:none">درباره من</a>
-                </li>
-                <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                    آموزشی
-                    <ul style="decoration:rtl">
-                        <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12">unity</li>
-                        <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12">3dmax</li>
-                        <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12">photoshop</li>
+        <div id="main-menu">
+            <ul>
+                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="#">درباره من</a></li>
+                <li><a href="#">آموزشی</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">unity</a></li>
+                        <li><a href="#">3dmax</a></li>
+                        <li><a href="#">photoshop</a></li>
                     </ul>
                 </li>
-
-                <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                    گالری
-                    <ul style="direction:rtl">
-                        <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12"><a href="galery1.html"
-                                                                              style="text-decoration:none">طبیعت
-                            آذربایجان شرقی</a></li>
-                        <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12"><a href="galery2.html"
-                                                                              style="text-decoration:none">هنری</a></li>
-                        <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12"><a href="galery3.html"
-                                                                              style="text-decoration:none">برترین های
-                            عکاسی</a></li>
+                <li><a href="#">گالری</a>
+                    <ul class="sub-menu">
+                        <li><a href="#">طبیعت آذربایجان شرقی</a></li>
+                        <li><a href="#">هنری</a></li>
+                        <li><a href="#">برترین ها</a></li>
                     </ul>
                 </li>
-
-                <li class="col-lg-2 col-md-12 col-sm-12 col-xs-12">
-                    عضویت
-                </li>
+                <li><a href="#">عضویت</a></li>
             </ul>
+            <div class="clear"></div>
         </div>
     </div>
 </div>
-<div style="height:50px"></div>
+<div style="height:50px" ></div>
 <div id="wowslider-container1">
     <div class="ws_images">
         <ul>
@@ -316,7 +291,5 @@
     <div class="ws_shadow"></div>
 </div>
 <script type="text/javascript" src="js/script.js"></script>
-</body>
-</html>
 </body>
 </html>
