@@ -1,295 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="fa" dir="rtl">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>صفحه اصلی</title>
-    <!-- http://webgoo.ir -->
-    <style type="text/css">
-        body {
-            font-family:Tahoma, Geneva, sans-serif;
-            font-size:12px;
-            direction:rtl;
-            line-height:20px;
-        }
-        a {
-            text-decoration:none;
-            color:#03C;
-        }
-        a:hover {
-            color:#CCC;
-        }
-        #main-menu {
-            position:relative;
-            line-height:16px;
-        }
-        #main-menu a {
-            display:block;
-            width:150px;
-            padding:8px;
-            border:#333333 solid 1px;
-            background-color:#5f6975;
-            color:#FFFFFF;
-        }
-        #main-menu a:hover {
-            background-color:#333333;
-        }
-        #main-menu ul {
-            list-style-type:none;
-            padding-top:0px;
-        }
-        #main-menu li {
-            float:right;
-            position:relative;
-            text-align:center;
-        }
-        #main-menu li ul a{
-            text-align:center;
-            border:0px;
-            border-bottom:#333333 1px solid;
-        }
-        #main-menu ul.sub-menu {
-            display:none;
-            position:absolute;
-            top:30px;
-            margin-right:0px;
-            padding:0px;
-            z-index:999;
-        }
-        #main-menu ul.sub-menu li {
-            text-align:center;
-        }
-        #main-menu li:hover ul.sub-menu {
-            display: block;
-            border: 1px solid #333333;
-        }
-        .clear{
-            clear:both;
-        }
-        #main-menu ul.sub-menu {
-            left:0px;
-        }
-        #main-menu li:hover ul ul{
-            display:none;
-        }
-        #main-menu li li:hover ul{
-            display:block;
-            position:absolute;
-            top:10px;
-            right:125px;
-            z-index:1000;
-        }
-    </style>
-    <SCRIPT LANGUAGE="JAVASCRIPT">
-        function showdate() {
-            week = new Array("يكشنبه", "دوشنبه", "سه شنبه", "چهارشنبه", "پنجشنبه", "جمعه", "شنبه")
-            months = new Array("فروردين", "ارديبهشت", "خرداد", "تير", "مرداد", "شهريور", "مهر", "آبان", "آذر", "دي", "بهمن", "اسفند");
-            a = new Date();
-            d = a.getDay();
-            day = a.getDate();
-            month = a.getMonth() + 1;
-            year = a.getYear();
-            if (year == 0) {
-                year = 2000;
-            }
-            if (year < 900) {
-                year += 1900;
-            }
-            y = 1;
-            for (i = 0; i < 3000; i += 4) {
-                if (year == i) {
-                    y = 2;
-                }
-            }
-            for (i = 1; i < 3000; i += 4) {
-                if (year == i) {
-                    y = 3;
-                }
-            }
-            if (y == 1) {
-                year -= ( (month < 3) || ((month == 3) && (day < 21)) ) ? 622 : 621;
-
-                switch (month) {
-                    case 1:
-                        (day < 21) ? (month = 10, day += 10) : (month = 11, day -= 20);
-                        break;
-                    case 2:
-                        (day < 20) ? (month = 11, day += 11) : (month = 12, day -= 19);
-                        break;
-                    case 3:
-                        (day < 21) ? (month = 12, day += 9) : (month = 1, day -= 20);
-                        break;
-                    case 4:
-                        (day < 21) ? (month = 1, day += 11) : (month = 2, day -= 20);
-                        break;
-                    case 5:
-                    case 6:
-                        (day < 22) ? (month -= 3, day += 10) : (month -= 2, day -= 21);
-                        break;
-                    case 7:
-                    case 8:
-                    case 9:
-                        (day < 23) ? (month -= 3, day += 9) : (month -= 2, day -= 22);
-                        break;
-                    case 10:
-                        (day < 23) ? (month = 7, day += 8) : (month = 8, day -= 22);
-                        break;
-                    case 11:
-                    case 12:
-                        (day < 22) ? (month -= 3, day += 9) : (month -= 2, day -= 21);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            if (y == 2) {
-                year -= ( (month < 3) || ((month == 3) && (day < 20)) ) ? 622 : 621;
-
-                switch (month) {
-                    case 1:
-                        (day < 21) ? (month = 10, day += 10) : (month = 11, day -= 20);
-                        break;
-                    case 2:
-                        (day < 20) ? (month = 11, day += 11) : (month = 12, day -= 19);
-                        break;
-                    case 3:
-                        (day < 20) ? (month = 12, day += 10) : (month = 1, day -= 19);
-                        break;
-                    case 4:
-                        (day < 20) ? (month = 1, day += 12) : (month = 2, day -= 19);
-                        break;
-                    case 5:
-                        (day < 21) ? (month = 2, day += 11) : (month = 3, day -= 20);
-                        break;
-                    case 6:
-                        (day < 21) ? (month = 3, day += 11) : (month = 4, day -= 20);
-                        break;
-                    case 7:
-                        (day < 22) ? (month = 4, day += 10) : (month = 5, day -= 21);
-                        break;
-                    case 8:
-                        (day < 22) ? (month = 5, day += 10) : (month = 6, day -= 21);
-                        break;
-                    case 9:
-                        (day < 22) ? (month = 6, day += 10) : (month = 7, day -= 21);
-                        break;
-                    case 10:
-                        (day < 22) ? (month = 7, day += 9) : (month = 8, day -= 21);
-                        break;
-                    case 11:
-                        (day < 21) ? (month = 8, day += 10) : (month = 9, day -= 20);
-                        break;
-                    case 12:
-                        (day < 21) ? (month = 9, day += 10) : (month = 10, day -= 20);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            if (y == 3) {
-                year -= ( (month < 3) || ((month == 3) && (day < 21)) ) ? 622 : 621;
-                switch (month) {
-                    case 1:
-                        (day < 20) ? (month = 10, day += 11) : (month = 11, day -= 19);
-                        break;
-                    case 2:
-                        (day < 19) ? (month = 11, day += 12) : (month = 12, day -= 18);
-                        break;
-                    case 3:
-                        (day < 21) ? (month = 12, day += 10) : (month = 1, day -= 20);
-                        break;
-                    case 4:
-                        (day < 21) ? (month = 1, day += 11) : (month = 2, day -= 20);
-                        break;
-                    case 5:
-                    case 6:
-                        (day < 22) ? (month -= 3, day += 10) : (month -= 2, day -= 21);
-                        break;
-                    case 7:
-                    case 8:
-                    case 9:
-                        (day < 23) ? (month -= 3, day += 9) : (month -= 2, day -= 22);
-                        break;
-                    case 10:
-                        (day < 23) ? (month = 7, day += 8) : (month = 8, day -= 22);
-                        break;
-                    case 11:
-                    case 12:
-                        (day < 22) ? (month -= 3, day += 9) : (month -= 2, day -= 21);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            document.write(week[d] + " " + day + " " + months[month - 1] + " " + year);
-        }
-    </SCRIPT>
-
-    <FONT face=tahoma size="2" color="#000000" align="right">
-        <SCRIPT>showdate()</SCRIPT>
-    </FONT>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/slider.js"></script>
+    <title>منو</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
-          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.2.0-rc2/css/bootstrap-rtl.min.css" /><!--rastchine menu boorstrap-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript" language="javascript" ></script>
 </head>
-<body style="background-color:#778899">
+<body>
 <div class="container">
     <div class="row">
-        <div id="main-menu">
-            <ul>
-                <li><a href="index.html" style="text-decoration:none">صفحه اصلی</a></li>
-                <li><a href="aboutme.html" style="text-decoration:none">درباره من</a></li>
-                <li><a href="#" style="text-decoration:none">آموزشی</a>
-                    <ul class="sub-menu">
-                        <li><a href="#" style="text-decoration:none">unity</a></li>
-                        <li><a href="#" style="text-decoration:none">3dmax</a></li>
-                        <li><a href="#" style="text-decoration:none">photoshop</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" style="text-decoration:none">گالری</a>
-                    <ul class="sub-menu">
-                        <li><a href="galery1.html" style="text-decoration:none">طبیعت آذربایجان شرقی</a></li>
-                        <li><a href="galery2.html" style="text-decoration:none">هنری</a></li>
-                        <li><a href="galery3.html" style="text-decoration:none">برترین ها</a></li>
-                    </ul>
-                </li>
-                <li><a href="#" style="text-decoration:none">عضویت</a></li>
-            </ul>
-            <div class="clear"></div>
+        <div class="col-xs-12">
+            <br>
+            <br>
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="menu1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">line1</a></li>
+                            <li><a href="#">line1</a></li>
+                            <li><a href="#">line1</a></li>
+                            <li><a href="#">line1</a></li>
+                            <li><a href="#">line1</a></li>
+                            <li><a href="#">line1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
     </div>
 </div>
-<div style="height:50px" ></div>
-<div id="wowslider-container1">
-    <div class="ws_images">
-        <ul>
-            <li><a href="#"><img src="data1/images/game1.jpg" alt="" title="" id="wows1_0"/></a>بازی های رایانه ای</li>
-            <li><a href="#"><img src="data1/images/animation1.jpg" alt="" title="" id="wows1_1"/></a>انیمیشن</li>
-            <li><a href="#"><img src="data1/images/webdesign1.jpg" alt="" title="" id="wows1_2"/></a>طراحی سایت</li>
-            <li><a href="#"><img src="data1/images/vb2.jpg" alt="" title="" id="wows1_3"/></a>واقعیت مجازی</li>
-        </ul>
-    </div>
-    <div class="ws_bullets">
-        <div><a href="#" title="اسلاید 1"><img src="data1/tooltips/slide1.jpg" alt="اسلاید 1"/>1</a> <a href="#"
-                                                                                                        title="اسلاید 2"><img
-                src="data1/tooltips/slide2.jpg" alt="اسلاید 2"/>2</a> <a href="#" title="اسلاید 3"><img
-                src="data1/tooltips/slide3.jpg" alt="اسلاید 3"/>3</a> <a href="#" title="اسلاید 4"><img
-                src="data1/tooltips/slide4.jpg" alt="اسلاید 4"/>4</a></div>
-    </div>
-    <div class="ws_shadow"></div>
-</div>
-<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
