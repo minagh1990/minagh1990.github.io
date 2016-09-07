@@ -1,49 +1,236 @@
-<html lang="fa" dir="rtl">
+<html lang="fa">
 <head>
     <title>منو</title>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript" language="javascript" ></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-rtl/3.2.0-rc2/css/bootstrap-rtl.min.css" /><!--rastchine menu boorstrap-->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <script type="text/javascript">
-        $('#myCarousel-1').carousel({
-            interval: 2000
-        })
-    </script>
-    <script type="text/javascript">
-        $('#myCarousel-2').carousel({
-            interval: false
-        })
-    </script>
 </head>
-<body>
+<body style="background-color:#778899">
+<br>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">minagh</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li>
+                    <a href="#">صفحه اصلی</a>
+                </li>
+                <li>
+                    <a href="#">درباره من</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        آموزشی
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">unity</a>
+                        </li>
+                        <li>
+                            <a href="#">3dmax</a>
+                        </li>
+                        <li>
+                            <a href="#">photoshop</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">
+                        گالری
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">طبیعت آذربایجان شرقی</a>
+                        </li>
+                        <li>
+                            <a href="#">هنری</a>
+                        </li>
+                        <li>
+                            <a href="#">بهترین ها</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">عضویت</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">جستجو</button>
+                </form>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 <!-- Button trigger modal -->
 <br>
 <br>
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
-</button>
+<div class="container">
+    <div class="row">
+        <div  class="group" class="col-xs-12 col-sm-10 col-sm-push-1 col-md-4  col-md-push-2 ">
+
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal">
+                <img src="data1/images/g1mini.jpg" class="img-responsive">
+            </button>
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal2">
+                <img src="data1/images/g2mini.jpg" class="img-responsive">
+            </button>
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal3">
+                <img src="data1/images/g3mini.jpg" class="img-responsive" >
+            </button>
+            <hr>
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal4">
+                <img src="data1/images/g4mini.jpg" class="img-responsive" >
+            </button>
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal5">
+                <img src="data1/images/g5mini.jpg"  class="img-responsive" >
+            </button>
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal6">
+                <img src="data1/images/g6mini.jpg"  class="img-responsive">
+            </button>
+            <hr>
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal7">
+                <img src="data1/images/g7mini.jpg" class="img-responsive">
+            </button>
+            <button type="button" class="btn btn-link btn-lg" data-toggle="modal" data-target="#myModal8">
+                <img src="data1/images/g8mini.jpg" class="img-responsive" >
+            </button>
+        </div>
+    </div>
+</div>
+
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-            </div>
-            <div class="modal-body">
-                ...
+                <img src="data1/images/g1.jpg" class="img-responsive" class="img-rounded" alt="Rounded Image">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="data1/images/g2.jpg" class="img-responsive" class="img-rounded" alt="Rounded Image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="data1/images/g3.jpg" class="img-responsive" class="img-rounded" alt="Rounded Image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="data1/images/g4.jpg" class="img-responsive" class="img-rounded" alt="Rounded Image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="data1/images/g5.jpg" class="img-responsive" class="img-rounded" alt="Rounded Image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="data1/images/g6.jpg" class="img-responsive" class="img-rounded" alt="Rounded Image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="data1/images/g7.jpg" class="img-responsive" class="img-rounded" alt="Rounded Image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="data1/images/g8.jpg" class="img-responsive" class="img-rounded" alt="Rounded Image">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- It's better to keep scripts at the end of body for speed -->
+<script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript" language="javascript"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+
+
 </body>
 </html>
