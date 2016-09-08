@@ -1,6 +1,14 @@
 
 /* ========== WEBKARAN.COM =============*/
-
+@font-face {
+	font-family: 'vazir';
+	src: url('../font/vazir-font/Vazir.eot?#') format('eot'),  /* IE6�8 */
+	url('../font/vazir-font/Vazir.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+	url('../font/vazir-font/Vazir.ttf') format('truetype');  /* Saf3�5, Chrome4+, FF3.5, Opera 10+ */
+}
+.font-vazir{
+	font-family:vazir;
+}
 
 #wowslider-container1 { 
 	zoom: 1; 
