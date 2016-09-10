@@ -1,0 +1,10 @@
+
+@font-face {
+	font-family: Vazir;
+	src: url('../font/vazir-font/Vazir.eot'),
+		/* non-IE */ url('../font/vazir-font/Vazir.woff'),
+	url('../font/vazir-font/Vazir.ttf'); /* IE */
+}
+.font-vazir{
+	font-family:Vazir ;
+}
