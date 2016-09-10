@@ -8,3 +8,20 @@
 .font-vazir{
 	font-family:Vazir ;
 }
+.up{
+	margin-top: 10px;
+}
+.uptow{
+	margin-top: 20px;
+}
+.upfive{
+	margin-top: 50px;
+}
+.background{
+	background-color: #cccccc;
+}
+.textalign{
+	text-align:justify;
+	direction:rtl;
+	margin-top: 10px;
+}
